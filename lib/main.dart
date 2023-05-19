@@ -5,14 +5,25 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  void answerQuestion() {
+    print('Answer chosen!');
+  }
+
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('My First App'),
-        ),
-        body: const Text('This is my default text'),
-      ),
+          appBar: AppBar(
+            title: const Text('My First App'),
+          ),
+          body: Column(
+            children: [
+              Text('The Question!'),
+              ElevatedButton(
+                onPressed: answerQuestion,
+                child: Text('Answer 1'),
+              )
+            ],
+          )),
     );
   }
 }
